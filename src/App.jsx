@@ -2,7 +2,7 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import aleoLogo from "./assets/aleo.svg";
 import "./App.css";
-import helloworld_program from "../helloworld/build/main.aleo?raw";
+import aleo_arjanjohan_program from "../aleo_arjanjohan/build/main.aleo?raw";
 import { AleoWorker } from "./workers/AleoWorker.js";
 
 const aleoWorker = AleoWorker();
@@ -20,7 +20,7 @@ function App() {
   async function execute() {
     setExecuting(true);
     const result = await aleoWorker.localProgramExecution(
-      helloworld_program,
+      aleo_arjanjohan_program,
       "main",
       ["5u32", "5u32"],
     );
@@ -32,7 +32,7 @@ function App() {
   async function deploy() {
     setDeploying(true);
     try {
-      const result = await aleoWorker.deployProgram(helloworld_program);
+      const result = await aleoWorker.deployProgram(aleo_arjanjohan_program);
       console.log("Transaction:")
       console.log("https://explorer.hamp.app/transaction?id=" + result)
       alert("Transaction ID: " + result);
@@ -69,7 +69,7 @@ function App() {
           <button disabled={executing} onClick={execute}>
             {executing
               ? `Executing...check console for details...`
-              : `Execute helloworld.aleo`}
+              : `Execute aleo_arjanjohan.aleo`}
           </button>
         </p>
         <p>

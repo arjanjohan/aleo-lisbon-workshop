@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+aleo_arjanjohan/.env
+src/workers/worker.js

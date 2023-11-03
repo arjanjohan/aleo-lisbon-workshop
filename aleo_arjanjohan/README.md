@@ -1,4 +1,4 @@
-# helloworld.aleo
+# aleo_arjanjohan.aleo
 
 ## Build Guide
 
